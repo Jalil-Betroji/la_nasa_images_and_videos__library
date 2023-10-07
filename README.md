@@ -3,7 +3,7 @@ NASA Image Search App
  
  <============================Code fetch data from api =================================>
 
-  const executeSearch = () => {
+  ```const executeSearch = () => {
     const apiUrl = `https://images-api.nasa.gov/search?q=${searchQuery}`;
     fetch(apiUrl)
       .then((response) => {
@@ -33,13 +33,14 @@ NASA Image Search App
     // Update hasSearched when search is performed
     setHasSearched(true);
   };
+  ```
 
 
 
  <===========================Our team=================================>
 
 
-Team: Soufiane Boukhar, Hamid achou, Jalil betrouji
+Team: Soufiane Boukhar, Hamid achaou, Jalil betroji
 
 
 
