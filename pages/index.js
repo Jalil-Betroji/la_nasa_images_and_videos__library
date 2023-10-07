@@ -54,7 +54,7 @@ const Index = () => {
           type="text"
           placeholder="Search for images..."
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="px-4 py-2 border border-gray-700 rounded-md w-80 text-black"
+          className="px-4 py-2 border border-gray-700 rounded-md w-80 text-black mb-4"
         />
         <button
           onClick={() => {
