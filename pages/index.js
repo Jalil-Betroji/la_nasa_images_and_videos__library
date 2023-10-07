@@ -9,12 +9,18 @@ const Index = () => {
 
   const executeSearch = () => {
     const apiUrl = `https://images-api.nasa.gov/search?q=${searchQuery}`;
-    axios.get(apiUrl)
+    fetch(apiUrl)
       .then((response) => {
-        if (response.data.collection && response.data.collection.items) {
-          setData(response.data.collection.items);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (data.collection && data.collection.items) {
+          setData(data.collection.items);
         } else {
-          console.error('Invalid API response:', response.data);
+          console.error('Invalid API response:', data);
         }
       })
       .catch((error) => {
